@@ -8,6 +8,7 @@ int TestSubject::square(int x) {
     if (isEven(x)) {
         return x * x;
     } else {
-        return x * x;
+        //Intentionally did wrong
+        return x + x;
     }
 }
