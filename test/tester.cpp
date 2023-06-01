@@ -4,11 +4,11 @@
 
 
 TEST(testSubjecttests,isEven){
-    EXPECT_FALSE(isEven(7));
+    EXPECT_FALSE(TestSubject::isEven(7));
 }
 
 TEST(testSubjecttests,isEven){
-    EXPECT_TRUE(isEven(4));
+    EXPECT_TRUE(TestSubject::isEven(4));
 }
 
 TEST(testSubjecttests,isEven){
