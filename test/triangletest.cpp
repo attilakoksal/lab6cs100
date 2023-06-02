@@ -67,6 +67,12 @@ TEST(TriangleTests, testEq2)
     EXPECT_TRUE (t->isEquilateral());
 }
 
+TEST(TriangleTests, testEq3)
+{
+    Triangle *t = new Triangle(4, 4, 3);
+    EXPECT_TRUE (t->isEquilateral());
+}
+
 TEST(TriangleTests, testIso1)
 {
     Triangle *t = new Triangle(3, 3, 3);
@@ -76,6 +82,12 @@ TEST(TriangleTests, testIso1)
 TEST(TriangleTests, testIso2)
 {
     Triangle *t = new Triangle(4, 3, 3);
+    EXPECT_TRUE (t->isIsosceles());
+}
+
+TEST(TriangleTests, testIso3)
+{
+    Triangle *t = new Triangle(5, 3, 3);
     EXPECT_TRUE (t->isIsosceles());
 }
 
