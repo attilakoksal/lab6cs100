@@ -20,6 +20,19 @@ Triangle::getPerimeter() const {
   return side1 + side2 + side2;
 }
 
+int Triangle::s1() const{
+  return this->side1;
+}
+
+int Triangle::s2() const{
+  return this->side1;
+}
+
+
+int Triangle::s3() const{
+  return this->side1;
+}
+
 
 double
 Triangle::getArea() const {

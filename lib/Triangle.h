@@ -39,6 +39,10 @@ namespace shapes {
 
     // Return true if this triangle is equilateral.
     bool isEquilateral() const;
+
+    int s1() const;
+    int s2() const; 
+    int s3() const;
   };
 
 }
