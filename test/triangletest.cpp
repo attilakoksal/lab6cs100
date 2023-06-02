@@ -39,7 +39,7 @@ TEST(TirangleTests, testArea3)
 
 TEST(TriangleTests, testKind1)
 {
-    Triangle *t = new Triangle(3, 3, 3);
+    Triangle *t = new Triangle(4, 4, 4);
     EXPECT_EQ (t->getKind(), Triangle::Kind::EQUILATERAL);
 }
 
