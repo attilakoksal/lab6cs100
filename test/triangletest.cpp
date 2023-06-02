@@ -13,6 +13,12 @@ TEST(TriangleTests, testPerimeter2) {
     EXPECT_EQ (static_cast<double>(aTriangle->getPerimeter()),9); //bug in the function because it doesnt consider parameters that arent ints
 }
 
+TEST(TriangleTests, testPerimeter3) 
+{
+    Triangle *aTriangle = new Triangle(5, 5, 5);
+    EXPECT_EQ (static_cast<double>(aTriangle->getPerimeter()),15); //bug in the function because it doesnt consider parameters that arent ints
+}
+
 TEST(TriangleTests, testArea1)
 {
     Triangle *aTriangle = new Triangle(3, 3, 3);
@@ -23,6 +29,12 @@ TEST(TriangleTests, testArea2)
 {
     Triangle *aTriangle = new Triangle(3, 3, 3);
     EXPECT_EQ (aTriangle->getArea(), 3.0*0.5*sqrt(6.75));
+}
+
+TEST(TirangleTests, testArea3)
+{
+    Triangle *t = new Triangle(5, 4, 3);
+    EXPECT_TRUE(t->getArea() == 6);
 }
 
 TEST(TriangleTests, testKind1)
@@ -37,17 +49,50 @@ TEST(TriangleTests, testKind2)
     EXPECT_EQ (t->getKind(), Triangle::Kind::ISOSCELES);
 }
 
-TEST(TriangleTests, testPerimeter5) {
-    Triangle *aTriangle = new Triangle(4, 4, 4);
-    EXPECT_EQ (static_cast<double>(aTriangle->getPerimeter()),12); //bug in the function because it doesnt consider parameters that arent ints
+TEST(TriangleTests, testKind3)
+{
+    Triangle *t = new Triangle(5, 4, 3);
+    EXPECT_TRUE (t->getKind() != Triangle::Kind::ISOSCELES);
 }
 
-TEST(TriangleTests, testPerimeter3) {
-    Triangle *aTriangle = new Triangle(5, 5, 5);
-    EXPECT_EQ (static_cast<double>(aTriangle->getPerimeter()),15); //bug in the function because it doesnt consider parameters that arent ints
-
-}TEST(TriangleTests, testPerimeter4) {
-    Triangle *aTriangle = new Triangle(6, 6, 6);
-    EXPECT_EQ (static_cast<double>(aTriangle->getPerimeter()),18); //bug in the function because it doesnt consider parameters that arent ints
+TEST(TriangleTests, testEq1)
+{
+    Triangle *t = new Triangle(3, 3, 3);
+    EXPECT_TRUE (t->isEquilateral());
 }
 
+TEST(TriangleTests, testEq2)
+{
+    Triangle *t = new Triangle(4, 3, 3);
+    EXPECT_TRUE (t->isEquilateral());
+}
+
+TEST(TriangleTests, testIso1)
+{
+    Triangle *t = new Triangle(3, 3, 3);
+    EXPECT_TRUE (t->isIsosceles());
+}
+
+TEST(TriangleTests, testIso2)
+{
+    Triangle *t = new Triangle(4, 3, 3);
+    EXPECT_TRUE (t->isIsosceles());
+}
+
+TEST(TriangleTests, const1)
+{
+    Triangle *t = new Triangle(3, 3, 3);
+    EXPECT_TRUE(t->s1() == 3);
+}
+
+TEST(TriangleTests, const2)
+{
+    Triangle *t = new Triangle(5, 4, 3);
+    EXPECT_TRUE(t->s2() == 5);
+}
+
+TEST(TriangleTests, const3)
+{
+    Triangle *t = new Triangle(7, 6, 5);
+    EXPECT_TRUE(t->s3() == 5);
+}
